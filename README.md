@@ -1,0 +1,1 @@
+# auto_class_generation
