@@ -1,0 +1,15 @@
+package <REPLACE_PACKAGE>.service;
+
+import java.util.List;
+
+import <REPLACE_PACKAGE>.model.<REPLACE_MODEL>;
+
+public interface <REPLACE_MODEL>Service {
+    List<<REPLACE_MODEL>> getAll<REPLACE_MODEL>s();
+
+    <REPLACE_MODEL> get<REPLACE_MODEL>ById();
+
+    Integer save<REPLACE_MODEL>();
+
+    void delete(Integer id);
+}

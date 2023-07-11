@@ -1,0 +1,28 @@
+package <REPLACE_PACKAGE>.service.impl;
+
+import java.util.List;
+
+import <REPLACE_PACKAGE>.model.<REPLACE_MODEL>;
+
+public class <REPLACE_MODEL>ServiceImpl implements <REPLACE_MODEL>Service {
+
+    @Override
+    public List<<REPLACE_MODEL>> getAll<REPLACE_MODEL>s() {
+        return null;
+    }
+
+    @Override
+    public <REPLACE_MODEL> get<REPLACE_MODEL>ById() {
+        return null;
+    }
+
+    @Override
+    public Integer save<REPLACE_MODEL>() {
+        return 0;
+    }
+
+    @Override
+    public void delete(Integer id) {
+
+    }
+}

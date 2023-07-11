@@ -1,0 +1,5 @@
+package <REPLACE_PACKAGE>.models;
+
+public class <REPLACE_MODEL> implements Serializable {
+
+}

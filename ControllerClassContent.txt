@@ -1,0 +1,43 @@
+package <REPLACE_PACKAGE>.controller;
+
+import java.util.List;
+
+import <REPLACE_PACKAGE>.model.<REPLACE_MODEL>;
+import <REPLACE_PACKAGE>.service.<REPLACE_MODEL>Service;
+
+public class <REPLACE_MODEL>RestController {
+
+	private <REPLACE_MODEL>Service service;
+
+    public <REPLACE_MODEL>RestController(<REPLACE_MODEL>Service service) {
+        this.service = service;
+    }
+
+	// @GetMapping("/rest/employee/get/{id}")
+	public <REPLACE_MODEL> get<REPLACE_MODEL>ByID(@PathVariable("id") int id) {
+		return service.get<REPLACE_MODEL>ById(id);
+	}
+
+	// @GetMapping("/rest/employee/getAll")
+	//Returning is List is supported with JSON response only
+	//If you want XML, then add a wrapper class as Root XML element, for example <REPLACE_MODEL>List
+	public List<<REPLACE_MODEL>> getAll<REPLACE_MODEL>s() {
+		return service.getAll<REPLACE_MODEL>s();
+	}
+
+	// @PostMapping("/rest/employee/create")
+	public <REPLACE_MODEL> create<REPLACE_MODEL>(/*@RequestBody*/ <REPLACE_MODEL> emp) {
+		service.save<REPLACE_MODEL>(emp);
+		return emp;
+	}
+
+	// @GetMapping("/rest/employee/search/{name}")
+	// public <REPLACE_MODEL> get<REPLACE_MODEL>ByName(/*@PathVariable("name")*/ String name) {
+	//	return service.search(name);
+	// }
+
+	// @DeleteMapping("/rest/employee/delete/{id}")
+	public void delete<REPLACE_MODEL>ByID(/*@PathVariable("id")*/ Integer id) {
+		service.delete(id);
+	}
+}
